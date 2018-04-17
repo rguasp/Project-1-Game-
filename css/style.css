@@ -1,0 +1,59 @@
+ canvas {
+  border-top: 50px solid black;
+} 
+/* game background and position */
+
+body {
+	color: white;
+	background-image: url("../images/Spacecat.jpg");
+  font-family: 'Press Start 2P', cursive;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#start-button{
+  width: 150px;
+  margin-left: 43%;
+ 
+}  
+#game-board{
+  background: url('../images/otherBackground.png');
+  height: 650px;
+  width: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* float: left; */
+}
+#gametitle{
+  /* float: left; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+  background: url('../images/otherBackground.png');
+  padding-bottom: 15px;
+  /* margin-top: 200px; */
+}
+#gamecontainer{
+  /* float: right; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+}
+#instructions{
+  width: 150px;
+  
+
+}
+#aboutGame{
+  width: 150px;
+  
+}
+button{
+  background-color: darkgray;
+}
+.button-container{
+  padding-top: 20px;
+}
