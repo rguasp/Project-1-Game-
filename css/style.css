@@ -1,6 +1,14 @@
  canvas {
-  border-top: 50px solid black;
-} 
+  background: transparent;
+  /* top: 250px;
+  left: 100px; */
+  position: absolute; 
+  display:flex;
+  justify-content: center;
+  width: 600px;
+  height: 650px; 
+
+}   
 /* game background and position */
 
 body {
@@ -9,20 +17,16 @@ body {
   font-family: 'Press Start 2P', cursive;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 #start-button{
   width: 150px;
   margin-left: 43%;
  
 }  
-#game-board{
-  background: url('../images/otherBackground.png');
-  height: 650px;
-  width: 600px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* float: left; */
-}
 #gametitle{
   /* float: left; */
   display: flex;
@@ -40,12 +44,14 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-
+  width: 100%;
+  height: 750px;
+  
 }
 #instructions{
   width: 150px;
   
-
+  
 }
 #aboutGame{
   width: 150px;
@@ -56,4 +62,28 @@ button{
 }
 .button-container{
   padding-top: 20px;
+}
+/* .container{
+  height: 100%;
+} */
+#game-board{
+  /* background: url('../images/otherBackground.png'); */
+  z-index: -2;
+  /* width: 600px;
+  height: 650px;  */
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  /* float: left; */
+}
+
+#enemy {
+  z-index: -1;
+  /* width: 600px;
+  height: 650px;  */
+}
+
+#ship {
+  z-index: 0;
+  /* width: 600px;
+  height: 650px;  */
 }
