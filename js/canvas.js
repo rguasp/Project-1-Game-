@@ -5,6 +5,9 @@ let ctx = canvas.getContext("2d");
 // Frames Start number
 let frameNum = 0;
 
+// Score counter
+let score = 0;
+
 // Background
 let background = new Image();
 background.src = "./images/bleh.png";
@@ -200,6 +203,7 @@ function updateCanvas(){
 	frameNum += 20;
 }
 
+// frame interval variable
 function frameIntveral(i) {
 	if ((frameNum / i) % 1 === 0) {
 		return true;
