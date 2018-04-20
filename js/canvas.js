@@ -2,6 +2,10 @@
 let canvas = document.getElementById("game-board");
 let ctx = canvas.getContext("2d");
 
+//Sounds
+let backgroundSound = new Audio("./Sounds/Forward-Assault.mp3");
+let enemyDestroyedSound = new Audio("./Sounds/Explosion5.mp3");
+let theLaserSound = new Audio("./Sounds/Laser-Shot-2.mp3");
 
 // Frames Start number
 let frameNum = 0;
@@ -146,7 +150,7 @@ function laserUpdate() {
 			elm.didHit(elem);
 			if (elm.didHit(elem)) {
 				boom(elem.x, elem.y)
-				//thesoundfileforenemydeath.play();
+				enemyDestroyedSound.play();
 			}
 		})
 	})
@@ -182,7 +186,7 @@ document.onkeydown = function(e)	{
 		// Space Bar attack
 		case 32:
 		pushLaser();
-		// player laser attack sound.play();
+		theLaserSound.play();
 		break;
 	}
 }
@@ -234,8 +238,8 @@ function updateEnemyFire() {
 function onloadPlaceholder() {
 	ctx.drawImage(playerShipImg, 240, 525, 100, 110);
 	ctx.drawImage(playerLaser, 280, 450, 20, 70);
-	ctx.drawImage(enemiesImg, 300, 10, 80, 90);
-	ctx.drawImage(enemiesImg, 100, 220, 80, 90);
+	ctx.drawImage(enemiesImg, 310, 10, 80, 90);
+	ctx.drawImage(enemiesImg, 120, 220, 80, 90);
 	ctx.drawImage(enemyBombs, 340, 150, 15, 50);
 	ctx.drawImage(enemyBombs, 150, 370, 15, 50);
 
@@ -253,9 +257,9 @@ window.onload = function() {
 function beginGame() {
 	this.intervalId = setInterval(updateCanvas, 20);
 	document.getElementById("start-button").disabled = true;
-	document.getElementById("howtoplay").disabled = true;
-	document.getElementById("gameinfo").disabled = true;
-	// background music .play();
+	document.getElementById("howtoplaybtn").disabled = true;
+	document.getElementById("gameinfobtn").disabled = true;
+	backgroundSound.play();
 }
 
 // Update game

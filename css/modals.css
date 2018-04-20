@@ -1,0 +1,58 @@
+/* modal background */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 50%; 
+  overflow: auto; 
+  background-image: url('../images/bleh.png');
+}
+/* i cant adjust the width for w/e reason*/
+#howtoplay  {
+ width: 100%;
+ height: 50%;
+}
+
+/* content box*/
+.modal-content {
+  background-color: red;
+  margin: 3% auto; 
+  padding: 40px;
+  border: 1px solid blue;
+  width: 100%; 
+}
+
+.modal-content h1,
+.modal-content h3,
+.modal-content p,
+.modal-content footer {
+  text-align: center
+} 
+
+/* closingbutton*/
+.closing,
+.closing2 {
+  color: blue;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closing:hover,
+.closing:focus,
+.closing2:hover,
+.closing2:focus {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content header {
+  text-align: center
+}
+#align {
+  text-align: center
+}
