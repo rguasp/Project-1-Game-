@@ -1,4 +1,4 @@
-// Assigning image to letiable
+// Assigning image to let
 let enemiesImg = new Image();
 enemiesImg.src = "./images/enemyShip.png";
 
